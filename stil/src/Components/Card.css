@@ -1,0 +1,28 @@
+img {
+    width: calc(100% - 100px);
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .movie-card {
+    flex: 1 0 20%;
+    min-width: 250px;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 6px 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /* set here max line number you need */
+    -webkit-line-clamp: 10;
+    overflow: hidden;
+  }
