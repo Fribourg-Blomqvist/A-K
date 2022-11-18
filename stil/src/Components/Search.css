@@ -1,0 +1,155 @@
+
+
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  /* .ul {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;  
+
+    flex-direction: column;
+   flex-wrap: wrap;
+   align-items: center; 
+    background-image: url(../../img/louvre.jpg); 
+   background-repeat: no-repeat; 
+background-size: cover;   
+   padding: 0;
+   display: flex;
+   flex-wrap: wrap;
+}  */
+
+/** card card **/
+.pic{
+  width: calc(100% - 100px);
+  object-fit: cover;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+ul {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.kardGroup {
+  /* flex: 1 0 20%;
+  min-width: 250px;
+  /* border: 2px solid white; */
+  /* border-radius: 10px;
+  margin: 5px;
+  padding: 6px 15px;
+  display: flex;  */
+  /* justify-content: space-between;
+  flex-direction: column; */
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; */
+  flex: 1 0 20%;
+  min-width: 250px;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 6px 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}      
+      
+      /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flipCard {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  /* border: 1px solid #f1f1f1; */
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flipCard:hover .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flipCardFront, .flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flipCardFront {
+  background-color: #bbb;
+  color: black;
+  height: 220%;
+}
+
+/* Style the back side */
+.flipCardBack {
+  background-color: dodgerblue;
+  color: white;
+  height: 220%;
+  transform: rotateY(180deg);
+}
+
+/***deuxieme version***/
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
