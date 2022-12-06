@@ -1,15 +1,6 @@
 
 
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
+
 
   /* .ul {
     height: 100vh;
@@ -42,27 +33,28 @@ ul {
   flex-wrap: wrap;
 }
 .kardGroup {
-  /* flex: 1 0 20%;
+  /* /* flex: 1 0 20%;
   min-width: 250px;
   /* border: 2px solid white; */
   /* border-radius: 10px;
   margin: 5px;
-  padding: 6px 15px;
-  display: flex;  */
+  padding: 6px 15px;*/
+  display: flex;  
+
   /* justify-content: space-between;
   flex-direction: column; */
   /* display: flex;
   flex-direction: column;
   flex-wrap: wrap; */
-  flex: 1 0 20%;
+  /* flex: 1 0 20%;
   min-width: 250px;
   border: 2px solid white;
   border-radius: 10px;
   margin: 5px;
   padding: 6px 15px;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+
+  flex-direction: column; */ 
 }      
       
       /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */

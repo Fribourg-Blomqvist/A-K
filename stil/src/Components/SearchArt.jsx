@@ -50,7 +50,8 @@
 //               <form>
 //                 <input type="text" onChange={(event) => setInputValue(event.target.value)}></input>
 //                 <button 
-//               onClick={openSearchBar}></button>
+//               onClick={openSearchBar}>
+//               </button>
 //               </form>
 //             </div>
           
@@ -92,70 +93,83 @@
 
 // export default SearchArt
 
-import React, { useState, useEffect } from "react";
-import "./Search.css";
-import axios from "axios";
 
-function App() {
-  const [loading, setLoading] = useState(false);
-  const [posts, setPosts] = useState([]);
-  const [searchTitle, setSearchTitle] = useState("");
+// import React, { useState, useEffect } from "react";
+// // import "./SearchArt.css";
+// import "./Search.css";
+// import axios from "axios";
 
-  useEffect(() => {
-    const loadPosts = async () => {
-      setLoading(true);
-      const response = await axios.get(
-        "https://api.europeana.eu/record/search.json?wskey=propalombuy&qf=collection%3Aart&qf=contentTier%3A%282+OR+3+OR+4%29&rows=24&profile=minimal&query=*%3A*&start=1"
-      );
-      setPosts(response.data);
-      setLoading(false);
-    };
+// function SearchArt() {
 
-    loadPosts();
-  }, []);
+//   const [loading, setLoading] = useState(false);
+//   const [posts, setPosts] = useState([]);
+//   const [searchTitle, setSearchTitle] = useState("");
 
-  return (
-    <div className="App">
-      <h3>Artiste, Oeuvres..</h3>
-      <input
-        style={{ width: "30%", height: "25px" }}
-        type="text"
-        placeholder="Search..."
-        onChange={(e) => setSearchTitle(e.target.value)}
-      />
-      {loading ? (
-        <h4>Loading ...</h4>
-      ) : (
-        posts
-          .filter((value) => {
-            if (searchTitle === "") {
-              return value;
-            } else if (
-              value.title.toLowerCase().includes(searchTitle.toLowerCase())
-            ) {
-              return value;
-            }
-          })
-          .map((item) => (<li className="kardGroup">
-          //               <div className="flipCard">
-          //                 <div className="flipCardInner">
-          //                   <div className="flipCardFront">
-          //                     <h2 key={item.id}>{item.title}</h2>
-          //                   <img className="pic" src={item.edmIsShownBy} alt="pics" ></img>
-          //                   </div>
-          //                   <div className="flipCardBack">
-          //                     <h3>{item.dcCreator}</h3>
-          //                     <p>{item.dataProvider}</p>
-          //                     <p>{item.dcDescription}</p>
+//   useEffect(() => {
+//     const loadPosts = async () => {
+//       setLoading(true);
+//       const response = await axios.get(
+//         "https://api.europeana.eu/record/search.json?wskey=propalombuy&qf=collection%3Aart&qf=contentTier%3A%282+OR+3+OR+4%29&rows=24&profile=minimal&query=*%3A*&start=1"
+//       );
+//       setPosts(response.data.items);
+//       setLoading(false);
+//     };
+
+//     loadPosts();
+//   }, []);
+
+//   return (
+//     <div className="container">
+//       <div className="inp">
+//       <h3>Artiste, Oeuvres..</h3>
+//       <input
+//         style={{ width: "30%", height: "25px" }}
+//         type="text"
+//         placeholder="Search..."
+//         onChange={(e) =>   setSearchTitle(e.target.value)}></input>
+//       </div>
+
+//       {loading ? (
+//         <h4>Loading ...</h4>
+//       ) : (
+//         posts
+//           .filter((value) => {
+//             if (searchTitle === "") {
+//               return value;
+//             } else if (
+//               value.title.toLowerCase().includes(searchTitle.toLowerCase())
+//             ) {
+//               return value;
+//             }
+//             return false;
+//           })
           
-                              
-          //                   </div>
-          //                 </div>
-          //          </div>
-          //     </li>  )
-      )}
-    </div>
-  );
-}
+//           .map((item,id ) => 
+          
+          
+//                       <li className="kardGroup">
+//                                 <div className="flipCard">
+//                                     <div className="flipCardInner">
+//                                         <div className="flipCardFront">
+//                                           <h2>{item.title}</h2>
+//                                           <img className="pic" src={item.edmIsShownBy} alt="pics" ></img>
+//                                         </div>
+//                                         <div className="flipCardBack">
+//                                           <h3>{item.dcCreator}</h3>
+//                                           <p>{item.dataProvider}</p>
+//                                           <p>{item.dcDescription}</p>
+                        
+                                            
+//                                         </div>
+//                                     </div>
+//                                 </div>
+//                           </li> 
+                        
+                        
+//       ))}
+//     </div>
+//   );
+// }
 
-export default App;
+// export default SearchArt;
+
