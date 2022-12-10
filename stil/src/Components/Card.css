@@ -2,13 +2,6 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 18px;
-    line-height: 1.5;
-    font-weight: 300;
-    color: #333;
-    font-family: "Nunito Sans", sans-serif;
-}
 
 body {
     margin: 0;
@@ -16,6 +9,7 @@ body {
     height: 100vh;
     background-color: #ecf0f9;
     background-attachment: fixed;
+    list-style: none;
 }
 
 .content {
@@ -54,6 +48,13 @@ body {
     margin-left: 1rem;
     margin-bottom: 3rem;
 }
+
+.pic {
+   
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
 .card {
     color: inherit;
     cursor: pointer;

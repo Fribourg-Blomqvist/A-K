@@ -4,8 +4,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Form from "./Components/Form";
-import Card from "./Components/Card";
-// import SearchArt from "./Components/SearchArt";
+// import Card from "./Components/Card";
 import Home from "./Pages/Home";
 import AboutUs from "./Pages/AboutUs";
 import ContactUs from "./Pages/ContactUs";
@@ -22,9 +21,7 @@ const App = () => {
 
     <Navbar/>
     <Form/>
-    <Card/>
 
-     {/* <SearchArt />  */}
  
       <Routes>
         <Route path="/" element={<Home/>}/> 

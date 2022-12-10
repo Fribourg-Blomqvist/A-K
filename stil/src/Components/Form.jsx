@@ -6,18 +6,20 @@ import "./Form.css";
 
 
 const Form = () =>{
-    const [inputValue, setInputValue] = useState("");
-    //       console.log(inputValue)
-    // /      useEffect(() => {
-    //         // fetchData()
-    //       }, []);
+  const [search, setSearch] = useState("");
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(`ma recherche:`);
+  }
 
 const [data, setData] = useState([])
   // aller chercher les données de la web API requete GET
  
   useEffect(() => {
+
+
     axios
-    .get("https://api.europeana.eu/record/search.json?wskey=propalombuy&qf=collection%3Aart&qf=contentTier%3A%282+OR+3+OR+4%29&rows=24&profile=minimal&query=*%3A*&start=1", {headers: {'Access-Control-Allow-Origin' : '*',
+    .get("https://api.europeana.eu/record/search.json?wskey=propalombuy&page=1&qf=TYPE%3A%22IMAGE%22&qf=contentTier%3A%281+OR+2+OR+3+OR+4%29&query=*%3A*&view=grid&profile=minimal&rows=24&start=1", {headers: {'Access-Control-Allow-Origin' : '*',
     'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',}})
     .then(response =>{
       setData(response.data.items)
@@ -29,10 +31,10 @@ const [data, setData] = useState([])
 return (
    <>
         <div className="webdesigntutsWorkshop">
-            <form>		    
+            <form onSubmit={handleSubmit}>		    
                 <input type="text"
-                 
-                 onChange={(event) => setInputValue(event.target.value)} placeholder="What are you looking for?"></input>	    	
+                  onChange={(e) => setSearch(e.target.value)}
+                  placeholder="What are you looking for?"></input>	    	
                 <button>Search</button>
             </form>
         </div>
