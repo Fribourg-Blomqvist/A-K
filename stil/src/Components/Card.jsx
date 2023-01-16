@@ -14,7 +14,7 @@ const Card = ({item}) =>{
              <div className="card">
                     <div className="front">
                         <h2 key ={item.id}>{item.title}</h2>
-                        <img className="pic" src={item.edmIsShownAt} alt="pics" ></img>
+                        <img className="pic" src={item} alt="pics" ></img>
                     </div>
                 <div className="back">
                     <div>
@@ -27,6 +27,9 @@ const Card = ({item}) =>{
             </div>
           
         </div>  
+
+
+          
         
     )
 }
